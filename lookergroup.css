@@ -1,0 +1,97 @@
+/* ===== Looker table “dark header + zebra rows” ===== */
+
+/* Base table */
+.visualization .table,
+.visualization table,
+.looker-table table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100%;
+  font-size: 12px;
+}
+
+/* Header row */
+.visualization thead th,
+.looker-table thead th,
+.table thead th {
+  background: #0f2f3a !important;   /* deep teal/blue */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-transform: none;
+  border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+  border-right: 1px solid rgba(255,255,255,0.10) !important;
+  padding: 10px 10px !important;
+  white-space: nowrap;
+}
+
+/* Rounded header corners (optional) */
+.visualization thead th:first-child,
+.looker-table thead th:first-child {
+  border-top-left-radius: 6px;
+}
+.visualization thead th:last-child,
+.looker-table thead th:last-child {
+  border-top-right-radius: 6px;
+  border-right: none !important;
+}
+
+/* Body cells */
+.visualization tbody td,
+.looker-table tbody td,
+.table tbody td {
+  background: #ffffff;
+  color: #223038;
+  padding: 8px 10px !important;
+  border-bottom: 1px solid #e6eaee !important;
+  border-right: 1px solid #eef2f5 !important;
+  vertical-align: middle;
+}
+
+/* Zebra striping */
+.visualization tbody tr:nth-child(even) td,
+.looker-table tbody tr:nth-child(even) td,
+.table tbody tr:nth-child(even) td {
+  background: #f5f7f9 !important;
+}
+
+/* Hover highlight */
+.visualization tbody tr:hover td,
+.looker-table tbody tr:hover td,
+.table tbody tr:hover td {
+  background: #eaf2f6 !important;
+}
+
+/* Align numeric columns right (best-effort) */
+.visualization td.number,
+.looker-table td.number,
+.table td.number,
+.visualization td.numeric,
+.looker-table td.numeric,
+.table td.numeric {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Totals row styling */
+.visualization tfoot td,
+.looker-table tfoot td,
+.table tfoot td,
+.visualization .totals td,
+.looker-table .totals td {
+  background: #eef3f6 !important;
+  font-weight: 600 !important;
+  border-top: 2px solid #cfd8df !important;
+}
+
+/* Reduce clutter from heavy grid lines */
+.visualization tbody td:last-child,
+.looker-table tbody td:last-child,
+.table tbody td:last-child {
+  border-right: none !important;
+}
+
+/* Optional: tighten long text in first column, like your example */
+.visualization tbody td:first-child,
+.looker-table tbody td:first-child {
+  font-weight: 500;
+}
